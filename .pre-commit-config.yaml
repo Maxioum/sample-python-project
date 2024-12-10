@@ -24,14 +24,6 @@ repos:
           - --config-file
           - mypy.ini
 
-  # Need a GITLAB_PRIVATE_TOKEN env var with api scope access token
-  - repo: https://gitlab.com/devopshq/gitlab-ci-linter
-    rev: v1.0.6
-    hooks:
-        - id: gitlab-ci-linter
-          stages:
-              - manual
-
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
     rev: v0.7.3
