@@ -1,0 +1,37 @@
+[project]
+name = "greeting"
+description = "A small python project with basic tools and features"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+]
+
+authors = [
+    { name = "Maxime Letellier", email = "maxime.eliot.letellier@gmail.com" }
+]
+dynamic = ["version"]
+
+
+[dependency-groups]
+dev = [
+    "faker>=33.1.0",
+    "pytest>=8.3.4",
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "version.txt"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-lsv"
+testpaths = ["tests"]
