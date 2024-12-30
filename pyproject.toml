@@ -7,10 +7,9 @@ dependencies = [
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: Other/Proprietary License",
     "Operating System :: OS Independent",
 ]
-
+license = {file = "LICENSE"}
 authors = [
     { name = "Maxime Letellier", email = "maxime.eliot.letellier@gmail.com" }
 ]
