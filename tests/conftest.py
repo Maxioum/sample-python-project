@@ -11,7 +11,9 @@ def person_male(faker: Faker) -> Person:
 
 @fixture
 def person_gender_unspecified(faker: Faker) -> Person:
-    return Person(faker.first_name_nonbinary(), faker.last_name_nonbinary(), Gender.Unspecified)
+    return Person(
+        faker.first_name_nonbinary(), faker.last_name_nonbinary(), Gender.Unspecified
+    )
 
 
 @fixture

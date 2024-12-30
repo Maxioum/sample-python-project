@@ -41,7 +41,9 @@ class Greeter:
     def __init__(self, person: Person) -> None:
         self.person = person
 
-    def greet_multiple_time(self, greet_count: int, *, is_formal: bool = True) -> List[str]:
+    def greet_multiple_time(
+        self, greet_count: int, *, is_formal: bool = True
+    ) -> List[str]:
         """Greet a person.
 
         :param greet_count: the number of time to greet
@@ -51,14 +53,19 @@ class Greeter:
         """
 
         if greet_count < 1:
-            raise ValueError(f"Greeting count should be a positive integer, not {greet_count}")
+            raise ValueError(
+                f"Greeting count should be a positive integer, not {greet_count}"
+            )
 
         # use title and lastname for a formal greeting, else only use the firstname
         name = self.person.lastname if is_formal else self.person.firstname
         title = self._titles[self.person.gender] if is_formal else ""
 
         logger.debug(
-            "%i %s greeting%s incoming !", greet_count, "formal" if is_formal else "", "s" if greet_count > 1 else ""
+            "%i %s greeting%s incoming !",
+            greet_count,
+            "formal" if is_formal else "",
+            "s" if greet_count > 1 else "",
         )
 
         message = f"Hello {title}{name} !"
