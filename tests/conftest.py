@@ -1,7 +1,7 @@
-from pytest import fixture
 from faker import Faker
+from pytest import fixture
 
-from greeting.complex import Greeter, Person, Gender
+from greeting.complex import Gender, Greeter, Person
 
 
 @fixture

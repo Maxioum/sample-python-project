@@ -1,8 +1,7 @@
-from dataclasses import field, dataclass
-from enum import Enum, auto
 import logging
+from dataclasses import dataclass, field
+from enum import Enum, auto
 from typing import List
-
 
 logger = logging.getLogger(__name__)
 
